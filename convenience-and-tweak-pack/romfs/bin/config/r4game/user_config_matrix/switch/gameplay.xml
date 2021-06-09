@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<UserConfig>
+	<Group id="Gameplay" displayName="gameplay">
+		<VisibleVars>
+            <Var id="HudTutorialEnabled" displayName="HudTutorialEnabled" displayType="TOGGLE"/>
+			<Var id="AutomaticFinishersEnabled" displayName="AutoFinishersEnabled" displayType="TOGGLE"/>
+			<Var id="DisableAutomaticSwordSheathe" displayName="menu_auto_sword_sheathe" displayType="TOGGLE"/>
+            <Var id="ColorblindFocusMode" displayName="witcher_senses_colorblind" displayType="TOGGLE" visibilityCondition="mainMenu"/>
+            <Var id="MotionSicknessFocusMode" displayName="witcher_senses_motion_sickness" displayType="TOGGLE"/>
+            <Var id="EnableUberMovement" displayName="menu_movement_response" displayType="OPTIONS" tags="customNames;customDisplayName">
+				<OptionsArray>
+					<Option id="0" displayName="menu_movement_standard">
+						<Entry varId="EnableUberMovement" value="0"/>
+					</Option>
+					<Option id="1" displayName="menu_movement_alternative">
+						<Entry varId="EnableUberMovement" value="1"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="AutoCameraCenter" displayName="AutoCameraCenter" displayType="TOGGLE"/>
+            <Var id="AutosaveTimeInterval" displayName="AutosaveTimeInterval" displayType="SLIDER;3;15;12"/>
+			<Var id="EnemyUpscaling" displayName="EnemyUpscaling" displayType="TOGGLE"/>
+		</VisibleVars>
+	</Group>
+    <Group id="Controls" displayName="option_controllerhelp">
+        <VisibleVars>
+			<Var overrideGroup="Input" id="InvertCameraX" displayName="camera_input_reverse_x_axis_ps4" displayType="TOGGLE"/>
+			<Var overrideGroup="Input" id="InvertCameraY" displayName="camera_input_reverse_y_axis_ps4" displayType="TOGGLE"/>
+            <Var id="LeftStickSensitivity" displayName="LeftStickSensitivity" displayType="SLIDER;0.5;1;50" visibilityCondition="hideAlways"/>
+            <Var overrideGroup="Input" id="RightStickCameraSensitivity" displayName="RightStickCameraSensitivity_ps4" displayType="SLIDER;0.01;1.5;149"/>
+			<Var overrideGroup="Input" id="RightStickAimSensitivity" displayName="RightStickAimSensitivity_ps4" displayType="SLIDER;0.01;1.5;149"/>
+			<Var overrideGroup="Input" id="PadVibrationEnabled" displayName="pad_vibrations" displayType="TOGGLE"/>
+			<Var id="SwapAcceptCancel" displayName="menu_option_control_scheme" displayType="OPTIONS" tags="customNames;customDisplayName">
+				<OptionsArray>
+					<Option id="0" displayName="menu_movement_alternative">
+						<Entry varId="SwapAcceptCancel" value="false"/>
+					</Option>
+					<Option id="1" displayName="menu_movement_standard">
+						<Entry varId="SwapAcceptCancel" value="true"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="AlternativeRadialMenuInputMode" displayName="alternative_radial_input_mode" displayType="TOGGLE"/>
+        </VisibleVars>
+    </Group>
+</UserConfig>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<UserConfig>
+	<Group id="Visuals" displayName="visuals.gamma">
+		<VisibleVars>
+			<Var id="GammaValue" displayName="gamma" displayType="GAMMA;0.1;1.9;90"/>
+		</VisibleVars>
+	</Group>
+	<Group id="PostProcess" displayName="visuals.postprocess" tags="graphics">
+		<VisibleVars>
+			<Var id="AllowMotionBlur" 	 displayName="allow_motion_blur" 	displayType="TOGGLE"/>
+			<Var id="AllowBlur" 		 displayName="allow_blur" 			displayType="TOGGLE"/>
+			<Var id="AllowBloom" 		 displayName="allow_bloom" 			displayType="TOGGLE"/>
+            <Var id="Virtual_SharpenAmount" 	 displayName="allow_sharpen" 	displayType="OPTIONS" tags="customNames">
+				<OptionsArray>
+					<Option id="0" displayName="panel_mainmenu_option_value_off">
+						<Entry varId="SharpenAmount" value="0"/>
+					</Option>
+					<Option id="1" displayName="preset_value_low">
+						<Entry varId="SharpenAmount" value="1"/>
+					</Option>
+					<Option id="2" displayName="preset_value_high">
+						<Entry varId="SharpenAmount" value="2"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+            <Var id="Virtual_DOF" 		 	 displayName="allow_dof" 			displayType="OPTIONS" tags="customNames">
+				<OptionsArray>
+					<Option id="0" displayName="panel_mainmenu_option_value_off">
+						<Entry varId="AllowDOF" value="false"/>
+						<Entry varId="AllowCutsceneDOF" value="false"/>
+					</Option>
+					<Option id="1" displayName="panel_mainmenu_option_value_on">
+						<Entry varId="AllowDOF" value="true"/>
+						<Entry varId="AllowCutsceneDOF" value="true"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="AllowShafts" 		 displayName="allow_shafts" 		displayType="TOGGLE"/>						
+			<Var id="AllowUnderwater" 		 displayName="allow_underwater" 		displayType="TOGGLE"/>										
+		</VisibleVars>
+	</Group>
+
+	<Group id="Rendering" displayName="visuals.postprocess" tags="refreshEngine;graphics">
+		<VisibleVars>
+			<Var id="Virtual_FoliageVisibility" displayName="foliage_visibility" displayType="OPTIONS">
+				<OptionsArray>
+					<Option id="0" displayName="low">
+						<Entry overrideGroup="Foliage" varId="MaxVisibilityDepth" value="4"/>
+						<Entry overrideGroup="Rendering/SpeedTree" varId="GrassSparsenessThresholdHandheldFactor" value="0.4"/>
+						<Entry overrideGroup="Rendering/SpeedTree" varId="GrassGenerationEfficiency" value="0.025"/>
+					</Option>
+					<Option id="1" displayName="medium">
+						<Entry overrideGroup="Foliage" varId="MaxVisibilityDepth" value="8"/>
+						<Entry overrideGroup="Rendering/SpeedTree" varId="GrassSparsenessThresholdHandheldFactor" value="0.6"/>
+						<Entry overrideGroup="Rendering/SpeedTree" varId="GrassGenerationEfficiency" value="0.050"/>
+					</Option>
+					<Option id="2" displayName="high">
+						<Entry overrideGroup="Foliage" varId="MaxVisibilityDepth" value="12"/>
+						<Entry overrideGroup="Rendering/SpeedTree" varId="GrassSparsenessThresholdHandheldFactor" value="0.8"/>
+						<Entry overrideGroup="Rendering/SpeedTree" varId="GrassGenerationEfficiency" value="0.075"/>
+					</Option>
+					<Option id="3" displayName="uber">
+						<Entry overrideGroup="Foliage" varId="MaxVisibilityDepth" value="24"/>
+						<Entry overrideGroup="Rendering/SpeedTree" varId="GrassSparsenessThresholdHandheldFactor" value="1.0"/>
+						<Entry overrideGroup="Rendering/SpeedTree" varId="GrassGenerationEfficiency" value="0.1"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="Virtual_WaterOptionVar" displayName="water_quality" displayType="OPTIONS" tags="refreshEngine">
+				<OptionsArray>
+					<Option id="0" displayName="low">
+           				<Entry varId="UseDynamicWaterSimulation" 	value="false"/>
+					</Option>
+					<Option id="1" displayName="high">
+           				<Entry varId="UseDynamicWaterSimulation" 	value="true"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="EnableTemporalAA" displayName="allow_Antialias" displayType="TOGGLE"/>
+		</VisibleVars>
+	</Group>
+</UserConfig>
